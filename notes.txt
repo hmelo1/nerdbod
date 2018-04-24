@@ -1,0 +1,18 @@
+Ideas:
+  Create Workouts
+    belongs_to Users
+    belongs_to Users
+    Muscle Group
+    Equipment
+    Date,
+    Time Lengths,
+    Reps,
+    Sets,
+    Type of Workout
+  Create Plans
+    Has_many Workouts
+    Time per workout
+  Users
+    Have_many Plans
+    Have_many workouts through plans
+    can create plans and select which workouts in it
