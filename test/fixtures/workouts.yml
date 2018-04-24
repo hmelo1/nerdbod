@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  muscle_group: MyString
+  equipment: MyString
+  time_length: 1
+  date: 2018-04-24
+  reps: 1
+  sets: 1
+
+two:
+  name: MyString
+  muscle_group: MyString
+  equipment: MyString
+  time_length: 1
+  date: 2018-04-24
+  reps: 1
+  sets: 1

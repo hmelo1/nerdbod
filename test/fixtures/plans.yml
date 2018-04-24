@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  time_per_workout: 1
+  equipment_needed: MyString
+  goal: MyString
+
+two:
+  time_per_workout: 1
+  equipment_needed: MyString
+  goal: MyString
