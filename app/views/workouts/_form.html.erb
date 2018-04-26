@@ -1,0 +1,32 @@
+<%= form_for(@workout) do |f| %>
+  <div class="form-group">
+    <%= f.label :name %><br>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :muscle_group %><br>
+    <%= f.text_field :muscle_group, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :equipment %><br>
+    <%= f.text_field :equipment, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :time_length, "How long should you do this excercise?" %><br>
+    <%= f.number_field :time_length, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :reps, "How many reps?" %><br>
+    <%= f.number_field :reps, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :sets, "How many sets?" %><br>
+    <%= f.number_field :sets, class: "form-control" %>
+  </div>
+
+<% end %>
