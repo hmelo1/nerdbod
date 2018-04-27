@@ -761,3 +761,249 @@ Processing by WorkoutsController#new as HTML
 Completed 200 OK in 212ms (Views: 209.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/workouts/new" for 127.0.0.1 at 2018-04-25 22:50:40 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/penguino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by WorkoutsController#new as HTML
+  Rendering workouts/new.html.erb within layouts/application
+  Rendered workouts/_form.html.erb (26.0ms)
+  Rendered workouts/new.html.erb within layouts/application (32.1ms)
+Completed 200 OK in 1012ms (Views: 944.6ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/workouts/new" for 127.0.0.1 at 2018-04-25 22:51:38 -0400
+Processing by WorkoutsController#new as HTML
+  Rendering workouts/new.html.erb within layouts/application
+  Rendered workouts/_form.html.erb (16.1ms)
+  Rendered workouts/new.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 153ms (Views: 149.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/workouts" for 127.0.0.1 at 2018-04-25 22:52:05 -0400
+Processing by WorkoutsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uq5WmGH06ZKm6ynM76Dlg/j3cYF09JHl/N7r5oCAQNzEd7ZGldMTn2YJG9BUT3E8fiqKyOINk/+Ce71naDOJMg==", "workout"=>{"name"=>"Curl", "muscle_group"=>"Bicep", "equipment"=>"Dumbell", "time_length"=>"5", "reps"=>"8", "sets"=>"3"}, "commit"=>"Create Workout"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/workouts_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/workouts_controller.rb:8
+  Rendering workouts/new.html.erb within layouts/application
+  Rendered workouts/_form.html.erb (30.9ms)
+  Rendered workouts/new.html.erb within layouts/application (38.5ms)
+Completed 200 OK in 386ms (Views: 278.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/workouts" for 127.0.0.1 at 2018-04-25 22:52:10 -0400
+Processing by WorkoutsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nA0r6T0P2RG8XAdiGirFiuUktoOXqYBHOg3du3P8fWbi1Ms3ySgjHHy+NX6hxVE1Y/lNygFQgl1EqIs6m0+0iA==", "workout"=>{"name"=>"Curl", "muscle_group"=>"Bicep", "equipment"=>"Dumbell", "time_length"=>"5", "reps"=>"8", "sets"=>"3"}, "commit"=>"Create Workout"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/workouts_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/workouts_controller.rb:8
+  Rendering workouts/new.html.erb within layouts/application
+  Rendered workouts/_form.html.erb (39.5ms)
+  Rendered workouts/new.html.erb within layouts/application (55.1ms)
+Completed 200 OK in 227ms (Views: 195.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/workouts" for 127.0.0.1 at 2018-04-26 22:02:50 -0400
+Processing by WorkoutsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JbjF4i5qtQhFd8kQShEHAmKF1B04i7R2h1y9UKs62k1bYSU82k1PBYWV+wzx/pO95FgvVK5ytmz5+evRQ4kTow==", "workout"=>{"name"=>"Curl", "muscle_group"=>"Bicep", "equipment"=>"Dumbell", "time_length"=>"5", "reps"=>"8", "sets"=>"3"}, "commit"=>"Create Workout"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/workouts_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/workouts_controller.rb:8
+  Rendering workouts/new.html.erb within layouts/application
+  Rendered workouts/_form.html.erb (5.1ms)
+  Rendered workouts/new.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 125ms (Views: 67.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/workouts" for 127.0.0.1 at 2018-04-26 22:03:06 -0400
+Processing by WorkoutsController#index as HTML
+  Rendering workouts/index.html.erb within layouts/application
+  Rendered workouts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 75ms (Views: 71.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/workouts/new" for 127.0.0.1 at 2018-04-26 22:03:18 -0400
+Processing by WorkoutsController#new as HTML
+  Rendering workouts/new.html.erb within layouts/application
+  Rendered workouts/_form.html.erb (12.1ms)
+  Rendered workouts/new.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 268ms (Views: 82.0ms | ActiveRecord: 64.2ms)
+
+
+Started POST "/workouts" for 127.0.0.1 at 2018-04-26 22:03:35 -0400
+Processing by WorkoutsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rOZCEB3+F4wM7yl2XBSGGih7pmlSJHhv+StLrXbInZLSP6LO6dntgcwNG2rn+xKlrqZdIMTdenWHjh0snntUfA==", "workout"=>{"name"=>"Curl", "muscle_group"=>"Bicep", "equipment"=>"Dumbell", "time_length"=>"5", "reps"=>"8", "sets"=>"3"}, "commit"=>"Create Workout"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/workouts_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/workouts_controller.rb:8
+Completed 500 Internal Server Error in 178ms (ActiveRecord: 0.4ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "authenticity_token"=>"rOZCEB3+F4wM7yl2XBSGGih7pmlSJHhv+StLrXbInZLSP6LO6dntgcwNG2rn+xKlrqZdIMTdenWHjh0snntUfA==", "workout"=><ActionController::Parameters {"name"=>"Curl", "muscle_group"=>"Bicep", "equipment"=>"Dumbell", "time_length"=>"5", "reps"=>"8", "sets"=>"3"} permitted: false>, "commit"=>"Create Workout", "controller"=>"workouts", "action"=>"create"} permitted: false>):
+  
+app/controllers/workouts_controller.rb:13:in `create'
+Started POST "/workouts" for 127.0.0.1 at 2018-04-26 22:10:22 -0400
+Processing by WorkoutsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rOZCEB3+F4wM7yl2XBSGGih7pmlSJHhv+StLrXbInZLSP6LO6dntgcwNG2rn+xKlrqZdIMTdenWHjh0snntUfA==", "workout"=>{"name"=>"Curl", "muscle_group"=>"Bicep", "equipment"=>"Dumbell", "time_length"=>"5", "reps"=>"8", "sets"=>"3"}, "commit"=>"Create Workout"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/workouts_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/workouts_controller.rb:8
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 3.2ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "authenticity_token"=>"rOZCEB3+F4wM7yl2XBSGGih7pmlSJHhv+StLrXbInZLSP6LO6dntgcwNG2rn+xKlrqZdIMTdenWHjh0snntUfA==", "workout"=><ActionController::Parameters {"name"=>"Curl", "muscle_group"=>"Bicep", "equipment"=>"Dumbell", "time_length"=>"5", "reps"=>"8", "sets"=>"3"} permitted: false>, "commit"=>"Create Workout", "controller"=>"workouts", "action"=>"create"} permitted: false>):
+  
+app/controllers/workouts_controller.rb:13:in `create'
+Started POST "/workouts" for 127.0.0.1 at 2018-04-26 22:16:40 -0400
+Processing by WorkoutsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rOZCEB3+F4wM7yl2XBSGGih7pmlSJHhv+StLrXbInZLSP6LO6dntgcwNG2rn+xKlrqZdIMTdenWHjh0snntUfA==", "workout"=>{"name"=>"Curl", "muscle_group"=>"Bicep", "equipment"=>"Dumbell", "time_length"=>"5", "reps"=>"8", "sets"=>"3"}, "commit"=>"Create Workout"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/workouts_controller.rb:8
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/workouts_controller.rb:8
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 4.6ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "authenticity_token"=>"rOZCEB3+F4wM7yl2XBSGGih7pmlSJHhv+StLrXbInZLSP6LO6dntgcwNG2rn+xKlrqZdIMTdenWHjh0snntUfA==", "workout"=><ActionController::Parameters {"name"=>"Curl", "muscle_group"=>"Bicep", "equipment"=>"Dumbell", "time_length"=>"5", "reps"=>"8", "sets"=>"3"} permitted: false>, "commit"=>"Create Workout", "controller"=>"workouts", "action"=>"create"} permitted: false>):
+  
+app/controllers/workouts_controller.rb:13:in `create'
+Started POST "/workouts" for 127.0.0.1 at 2018-04-26 22:16:51 -0400
+Processing by WorkoutsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rOZCEB3+F4wM7yl2XBSGGih7pmlSJHhv+StLrXbInZLSP6LO6dntgcwNG2rn+xKlrqZdIMTdenWHjh0snntUfA==", "workout"=>{"name"=>"Curl", "muscle_group"=>"Bicep", "equipment"=>"Dumbell", "time_length"=>"5", "reps"=>"8", "sets"=>"3"}, "commit"=>"Create Workout"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/workouts_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/workouts_controller.rb:8
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "authenticity_token"=>"rOZCEB3+F4wM7yl2XBSGGih7pmlSJHhv+StLrXbInZLSP6LO6dntgcwNG2rn+xKlrqZdIMTdenWHjh0snntUfA==", "workout"=><ActionController::Parameters {"name"=>"Curl", "muscle_group"=>"Bicep", "equipment"=>"Dumbell", "time_length"=>"5", "reps"=>"8", "sets"=>"3"} permitted: false>, "commit"=>"Create Workout", "controller"=>"workouts", "action"=>"create"} permitted: false>):
+  
+app/controllers/workouts_controller.rb:13:in `create'
+Started POST "/workouts" for 127.0.0.1 at 2018-04-26 22:17:41 -0400
+Processing by WorkoutsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rOZCEB3+F4wM7yl2XBSGGih7pmlSJHhv+StLrXbInZLSP6LO6dntgcwNG2rn+xKlrqZdIMTdenWHjh0snntUfA==", "workout"=>{"name"=>"Curl", "muscle_group"=>"Bicep", "equipment"=>"Dumbell", "time_length"=>"5", "reps"=>"8", "sets"=>"3"}, "commit"=>"Create Workout"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/workouts_controller.rb:8
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/workouts_controller.rb:8
+Completed 500 Internal Server Error in 169ms (ActiveRecord: 3.9ms)
+
+
+  
+NoMethodError (undefined method `errors' for #<ActionController::Parameters:0x007fb1d834cbf0>):
+  
+app/controllers/workouts_controller.rb:13:in `create'
+Started POST "/workouts" for 127.0.0.1 at 2018-04-26 22:17:57 -0400
+Processing by WorkoutsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rOZCEB3+F4wM7yl2XBSGGih7pmlSJHhv+StLrXbInZLSP6LO6dntgcwNG2rn+xKlrqZdIMTdenWHjh0snntUfA==", "workout"=>{"name"=>"Curl", "muscle_group"=>"Bicep", "equipment"=>"Dumbell", "time_length"=>"5", "reps"=>"8", "sets"=>"3"}, "commit"=>"Create Workout"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/workouts_controller.rb:8
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/workouts_controller.rb:8
+Completed 422 Unprocessable Entity in 77ms (ActiveRecord: 2.9ms)
+
+
+  
+ActiveRecord::RecordInvalid (Validation failed: Plan must exist):
+  
+app/controllers/workouts_controller.rb:8:in `create'
+Started POST "/workouts" for 127.0.0.1 at 2018-04-26 22:20:29 -0400
+  
+LoadError (cannot load such file -- pry):
+  
+app/controllers/workouts_controller.rb:1:in `<main>'
+Started POST "/workouts" for 127.0.0.1 at 2018-04-26 22:22:05 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/penguino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by WorkoutsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rOZCEB3+F4wM7yl2XBSGGih7pmlSJHhv+StLrXbInZLSP6LO6dntgcwNG2rn+xKlrqZdIMTdenWHjh0snntUfA==", "workout"=>{"name"=>"Curl", "muscle_group"=>"Bicep", "equipment"=>"Dumbell", "time_length"=>"5", "reps"=>"8", "sets"=>"3"}, "commit"=>"Create Workout"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):2
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ (pry):2
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):4
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ (pry):4
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):12
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ (pry):12
+  [1m[35m (1.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):13
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ (pry):13
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):16
+  [1m[36mUser Create (20.8ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2018-04-27 02:26:32.028881"], ["updated_at", "2018-04-27 02:26:32.028881"]]
+  ↳ (pry):16
+  [1m[35m (22.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):16
+Started GET "/workouts" for 127.0.0.1 at 2018-04-26 22:28:22 -0400
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/penguino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by WorkoutsController#index as HTML
+  Rendering workouts/index.html.erb within layouts/application
+  Rendered workouts/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 898ms (Views: 877.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/workouts/new" for 127.0.0.1 at 2018-04-26 22:28:29 -0400
+Processing by WorkoutsController#new as HTML
+  Rendering workouts/new.html.erb within layouts/application
+  Rendered workouts/_form.html.erb (30.7ms)
+  Rendered workouts/new.html.erb within layouts/application (49.8ms)
+Completed 200 OK in 410ms (Views: 153.4ms | ActiveRecord: 2.5ms)
+
+
+Started POST "/workouts" for 127.0.0.1 at 2018-04-26 22:28:44 -0400
+Processing by WorkoutsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fgGvHGendI0fOChLCAs7EUxqPmhp7Yd21PmMt0hwZXgA2E/Ck4COgN/aGlez5K+uyrfFIf8UhWyqXNo2oMOslg==", "workout"=>{"name"=>"Curl", "muscle_group"=>"Bicep", "equipment"=>"Dumbell", "time_length"=>"5", "reps"=>"8", "sets"=>"3"}, "commit"=>"Create Workout"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (pry):2
+  [1m[36mWorkout Create (16.4ms)[0m  [1m[32mINSERT INTO "workouts" ("name", "muscle_group", "equipment", "time_length", "reps", "sets", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Curl"], ["muscle_group", "Bicep"], ["equipment", "Dumbell"], ["time_length", 5], ["reps", 8], ["sets", 3], ["created_at", "2018-04-27 02:28:54.894026"], ["updated_at", "2018-04-27 02:28:54.894026"]]
+  ↳ (pry):2
+  [1m[35m (23.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (pry):2
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/workouts_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/workouts_controller.rb:10
+Completed 500 Internal Server Error in 13892ms (ActiveRecord: 40.0ms)
+
+
+  
+RuntimeError (<ActionController::Parameters {"utf8"=>"✓", "authenticity_token"=>"fgGvHGendI0fOChLCAs7EUxqPmhp7Yd21PmMt0hwZXgA2E/Ck4COgN/aGlez5K+uyrfFIf8UhWyqXNo2oMOslg==", "workout"=><ActionController::Parameters {"name"=>"Curl", "muscle_group"=>"Bicep", "equipment"=>"Dumbell", "time_length"=>"5", "reps"=>"8", "sets"=>"3"} permitted: false>, "commit"=>"Create Workout", "controller"=>"workouts", "action"=>"create"} permitted: false>):
+  
+app/controllers/workouts_controller.rb:11:in `create'
+Started POST "/workouts" for 127.0.0.1 at 2018-04-26 22:29:32 -0400
+Processing by WorkoutsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fgGvHGendI0fOChLCAs7EUxqPmhp7Yd21PmMt0hwZXgA2E/Ck4COgN/aGlez5K+uyrfFIf8UhWyqXNo2oMOslg==", "workout"=>{"name"=>"Curl", "muscle_group"=>"Bicep", "equipment"=>"Dumbell", "time_length"=>"5", "reps"=>"8", "sets"=>"3"}, "commit"=>"Create Workout"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/workouts_controller.rb:9
+  [1m[36mWorkout Create (1.9ms)[0m  [1m[32mINSERT INTO "workouts" ("name", "muscle_group", "equipment", "time_length", "reps", "sets", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Curl"], ["muscle_group", "Bicep"], ["equipment", "Dumbell"], ["time_length", 5], ["reps", 8], ["sets", 3], ["created_at", "2018-04-27 02:29:42.906953"], ["updated_at", "2018-04-27 02:29:42.906953"]]
+  ↳ app/controllers/workouts_controller.rb:9
+  [1m[35m (13.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/workouts_controller.rb:9
+Redirected to http://0.0.0.0:3000/workouts/2
+Completed 302 Found in 79ms (ActiveRecord: 19.6ms)
+
+
+Started GET "/workouts/2" for 127.0.0.1 at 2018-04-26 22:29:43 -0400
+Processing by WorkoutsController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering workouts/show.html.erb within layouts/application
+  Rendered workouts/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 141ms (Views: 138.3ms | ActiveRecord: 0.0ms)
+
+
