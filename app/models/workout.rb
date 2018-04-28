@@ -1,5 +1,5 @@
 class Workout < ApplicationRecord
-  #belongs_to :plan
+  belongs_to :plan
   #has_many :users, through: :plans
 
   validates :name, :muscle_group, :equipment, :time_length, :reps, :sets, presence: true

@@ -10,7 +10,7 @@ class WorkoutsController < ApplicationController
   def create
     @workout = Workout.new(workout_params)
     if @workout.save!
-      redirect_to workout_url(@workout), notice: 'Successfully created workout!'
+      redirect_to plan_workout_url(@workout), notice: 'Successfully created workout!'
     else
       render :new
     end
@@ -28,7 +28,7 @@ class WorkoutsController < ApplicationController
 
   def update
     if @workout.update(workout_params)
-      redirect_to workout_url(@workout), notice: 'Successfully updated workout!'
+      redirect_to plan_workout_url(@workout), notice: 'Successfully updated workout!'
     else
       render :edit
     end
@@ -36,7 +36,7 @@ class WorkoutsController < ApplicationController
 
   def destroy
     @workout.destroy
-    redirect_to workouts_url, notice: 'Successfully deleted workout!'
+    redirect_to plan_workouts_url, notice: 'Successfully deleted workout!'
   end
 
   private
