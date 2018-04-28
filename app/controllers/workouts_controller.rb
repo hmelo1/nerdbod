@@ -8,7 +8,6 @@ class WorkoutsController < ApplicationController
   end
 
   def create
-    binding.pry
     @workout = Workout.new(workout_params)
     if @workout.save!
       redirect_to workout_url(@workout), notice: 'Successfully created workout!'
