@@ -1718,3 +1718,119 @@ Processing by WorkoutsController#show as HTML
 Completed 200 OK in 83ms (Views: 80.2ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/workouts/1" for 127.0.0.1 at 2018-04-28 07:51:46 -0400
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/penguino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by WorkoutsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWorkout Load (0.5ms)[0m  [1m[34mSELECT  "workouts".* FROM "workouts" WHERE "workouts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workouts_controller.rb:46
+  Rendering workouts/show.html.erb within layouts/application
+  Rendered workouts/show.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 795ms (Views: 719.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/workouts/1" for 127.0.0.1 at 2018-04-28 07:52:00 -0400
+Processing by WorkoutsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWorkout Load (0.3ms)[0m  [1m[34mSELECT  "workouts".* FROM "workouts" WHERE "workouts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workouts_controller.rb:46
+  Rendering workouts/show.html.erb within layouts/application
+  Rendered workouts/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 76ms (Views: 54.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/workouts/1" for 127.0.0.1 at 2018-04-28 07:52:15 -0400
+Processing by WorkoutsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWorkout Load (0.2ms)[0m  [1m[34mSELECT  "workouts".* FROM "workouts" WHERE "workouts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workouts_controller.rb:46
+  Rendering workouts/show.html.erb within layouts/application
+  Rendered workouts/show.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 125ms (Views: 116.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/workouts/1" for 127.0.0.1 at 2018-04-28 07:52:36 -0400
+Processing by WorkoutsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWorkout Load (0.2ms)[0m  [1m[34mSELECT  "workouts".* FROM "workouts" WHERE "workouts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workouts_controller.rb:46
+  Rendering workouts/show.html.erb within layouts/application
+  Rendered workouts/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 79ms (Views: 72.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/workouts/1" for 127.0.0.1 at 2018-04-28 07:52:49 -0400
+Processing by WorkoutsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWorkout Load (0.2ms)[0m  [1m[34mSELECT  "workouts".* FROM "workouts" WHERE "workouts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workouts_controller.rb:46
+  Rendering workouts/show.html.erb within layouts/application
+  Rendered workouts/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 160ms (Views: 156.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/workouts/2" for 127.0.0.1 at 2018-04-28 07:52:57 -0400
+Processing by WorkoutsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mWorkout Load (0.2ms)[0m  [1m[34mSELECT  "workouts".* FROM "workouts" WHERE "workouts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/workouts_controller.rb:46
+  Rendering workouts/show.html.erb within layouts/application
+  Rendered workouts/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 195ms (Views: 185.0ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/workouts/2" for 127.0.0.1 at 2018-04-28 07:52:59 -0400
+Processing by WorkoutsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"yDF2a9I0SAjh06MLiNdMyeuTgEmkWbzoZme4Y9UQ9p+26Ja1JhOyBSExkRczONh2bU57ADKgvvIYwu7iPaM/cQ==", "id"=>"2"}
+  [1m[36mWorkout Load (0.3ms)[0m  [1m[34mSELECT  "workouts".* FROM "workouts" WHERE "workouts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/workouts_controller.rb:46
+  Rendering workouts/destroy.html.erb within layouts/application
+  Rendered workouts/destroy.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 148ms (Views: 141.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/workouts/2" for 127.0.0.1 at 2018-04-28 07:53:02 -0400
+Processing by WorkoutsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mWorkout Load (0.2ms)[0m  [1m[34mSELECT  "workouts".* FROM "workouts" WHERE "workouts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/workouts_controller.rb:46
+  Rendering workouts/show.html.erb within layouts/application
+  Rendered workouts/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 159ms (Views: 150.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/workouts/2" for 127.0.0.1 at 2018-04-28 07:54:43 -0400
+Processing by WorkoutsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mWorkout Load (0.3ms)[0m  [1m[34mSELECT  "workouts".* FROM "workouts" WHERE "workouts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/workouts_controller.rb:48
+  Rendering workouts/show.html.erb within layouts/application
+  Rendered workouts/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 127ms (Views: 66.1ms | ActiveRecord: 2.0ms)
+
+
+Started DELETE "/workouts/2" for 127.0.0.1 at 2018-04-28 07:54:46 -0400
+Processing by WorkoutsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Za122eVWXiSCfA3kze28GBEf0crkUzbMYGM2BoiLEfQbdJYHEXGkKUKeP/h2Aiinl8Iqg3KqNNYexmCHYDjYGg==", "id"=>"2"}
+  [1m[36mWorkout Load (0.3ms)[0m  [1m[34mSELECT  "workouts".* FROM "workouts" WHERE "workouts"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/workouts_controller.rb:48
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/workouts_controller.rb:37
+  [1m[36mWorkout Destroy (1.7ms)[0m  [1m[31mDELETE FROM "workouts" WHERE "workouts"."id" = ?[0m  [["id", 2]]
+  ↳ app/controllers/workouts_controller.rb:37
+  [1m[35m (8.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/workouts_controller.rb:37
+Redirected to http://0.0.0.0:3000/workouts
+Completed 302 Found in 28ms (ActiveRecord: 10.6ms)
+
+
+Started GET "/workouts" for 127.0.0.1 at 2018-04-28 07:54:46 -0400
+Processing by WorkoutsController#index as HTML
+  Rendering workouts/index.html.erb within layouts/application
+  [1m[36mWorkout Load (1.0ms)[0m  [1m[34mSELECT "workouts".* FROM "workouts"[0m
+  ↳ app/views/workouts/index.html.erb:2
+  Rendered workouts/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 114ms (Views: 110.7ms | ActiveRecord: 1.0ms)
+
+
