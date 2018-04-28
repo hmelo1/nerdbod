@@ -1,7 +1,7 @@
 <h1><%= @workout.full_name %></h1>
-<h5 class="col-sm-8 mx-auto">Sets: <%= @workout.sets %></h5>
-<h5 class="col-sm-8 mx-auto">Reps: <%= @workout.reps %></h5>
-<h5 class="col-sm-8 mx-auto">Time between Sets: <%= @workout.rest_time %> </h5>
+<h5 class="col-sm-8 mx-auto">Sets: <br><%= @workout.sets %></h5>
+<h5 class="col-sm-8 mx-auto">Reps: <br><%= @workout.reps %></h5>
+<h5 class="col-sm-8 mx-auto">Time between Sets: <br><%= @workout.rest_time %> </h5>
 
 <div class="actions">
   <%= link_to 'Edit workout', [:edit, @workout], class: "btn btn-default btn-lg" %>

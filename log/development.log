@@ -1629,3 +1629,92 @@ Processing by WorkoutsController#show as HTML
 Completed 200 OK in 863ms (Views: 778.6ms | ActiveRecord: 2.0ms)
 
 
+Started GET "/workouts/1/edit" for 127.0.0.1 at 2018-04-28 07:37:42 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/penguino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by WorkoutsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWorkout Load (0.5ms)[0m  [1m[34mSELECT  "workouts".* FROM "workouts" WHERE "workouts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workouts_controller.rb:42
+  Rendering workouts/edit.html.erb within layouts/application
+  Rendered workouts/_form.html.erb (25.6ms)
+  Rendered workouts/edit.html.erb within layouts/application (30.4ms)
+Completed 200 OK in 725ms (Views: 631.5ms | ActiveRecord: 2.6ms)
+
+
+Started PATCH "/workouts/1" for 127.0.0.1 at 2018-04-28 07:37:53 -0400
+Processing by WorkoutsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JTcMoOb1hlHQMgOf4hbXj1VgjtM+YbSkd3ao1fEB9Ixb7ux+EtJ8XBDQMYNZ+UMw0711mqiYtr4J0/5UGbI9Yg==", "workout"=>{"name"=>"Curl", "muscle_group"=>"Bicep", "equipment"=>"Dumbbell", "time_length"=>"60", "reps"=>"8", "sets"=>"3"}, "commit"=>"Update Workout", "id"=>"1"}
+  [1m[36mWorkout Load (0.4ms)[0m  [1m[34mSELECT  "workouts".* FROM "workouts" WHERE "workouts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workouts_controller.rb:42
+  Rendering workouts/update.html.erb within layouts/application
+  Rendered workouts/update.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 99ms (Views: 94.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/workouts/1" for 127.0.0.1 at 2018-04-28 07:40:31 -0400
+Processing by WorkoutsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWorkout Load (0.5ms)[0m  [1m[34mSELECT  "workouts".* FROM "workouts" WHERE "workouts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workouts_controller.rb:47
+  Rendering workouts/show.html.erb within layouts/application
+  Rendered workouts/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 153ms (Views: 106.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/workouts/1/edit" for 127.0.0.1 at 2018-04-28 07:40:43 -0400
+Processing by WorkoutsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWorkout Load (0.3ms)[0m  [1m[34mSELECT  "workouts".* FROM "workouts" WHERE "workouts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workouts_controller.rb:47
+  Rendering workouts/edit.html.erb within layouts/application
+  Rendered workouts/_form.html.erb (13.1ms)
+  Rendered workouts/edit.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 121ms (Views: 111.0ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/workouts/1" for 127.0.0.1 at 2018-04-28 07:40:50 -0400
+Processing by WorkoutsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SL51WL+Jm/qrdBZFxPbOKkd7dkdh6ex9132rePOSFmH2UuiA0wXohq75M8Jb56EsrApxDXT3QTVEW6MnDcNlaQ==", "workout"=>{"name"=>"Curl", "muscle_group"=>"Bicep", "equipment"=>"Dumbbell", "time_length"=>"60", "reps"=>"8", "sets"=>"3"}, "commit"=>"Update Workout", "id"=>"1"}
+  [1m[36mWorkout Load (0.2ms)[0m  [1m[34mSELECT  "workouts".* FROM "workouts" WHERE "workouts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workouts_controller.rb:47
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/workouts_controller.rb:30
+  [1m[36mWorkout Update (7.2ms)[0m  [1m[33mUPDATE "workouts" SET "equipment" = ?, "time_length" = ?, "updated_at" = ? WHERE "workouts"."id" = ?[0m  [["equipment", "Dumbbell"], ["time_length", 60], ["updated_at", "2018-04-28 11:40:50.596568"], ["id", 1]]
+  ↳ app/controllers/workouts_controller.rb:30
+  [1m[35m (7.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/workouts_controller.rb:30
+Redirected to http://0.0.0.0:3000/workouts/1
+Completed 302 Found in 38ms (ActiveRecord: 15.4ms)
+
+
+Started GET "/workouts/1" for 127.0.0.1 at 2018-04-28 07:40:50 -0400
+Processing by WorkoutsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWorkout Load (0.5ms)[0m  [1m[34mSELECT  "workouts".* FROM "workouts" WHERE "workouts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workouts_controller.rb:47
+  Rendering workouts/show.html.erb within layouts/application
+  Rendered workouts/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 93ms (Views: 87.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/workouts/1" for 127.0.0.1 at 2018-04-28 07:41:11 -0400
+Processing by WorkoutsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWorkout Load (0.3ms)[0m  [1m[34mSELECT  "workouts".* FROM "workouts" WHERE "workouts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workouts_controller.rb:47
+  Rendering workouts/show.html.erb within layouts/application
+  Rendered workouts/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 130ms (Views: 126.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/workouts/1" for 127.0.0.1 at 2018-04-28 07:41:23 -0400
+Processing by WorkoutsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWorkout Load (0.2ms)[0m  [1m[34mSELECT  "workouts".* FROM "workouts" WHERE "workouts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/workouts_controller.rb:47
+  Rendering workouts/show.html.erb within layouts/application
+  Rendered workouts/show.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 83ms (Views: 80.2ms | ActiveRecord: 0.2ms)
+
+

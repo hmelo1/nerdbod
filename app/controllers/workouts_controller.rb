@@ -27,6 +27,11 @@ class WorkoutsController < ApplicationController
   end
 
   def update
+    if @workout.update(workout_params)
+      redirect_to workout_url(@workout), notice: 'Successful update!'
+    else
+      render :edit
+    end
   end
 
   def destroy
