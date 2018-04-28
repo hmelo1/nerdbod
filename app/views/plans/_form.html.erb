@@ -2,7 +2,17 @@
   <div class="form-group">
     <%= f.label :name %><br>
     <%= f.text_field :name, class: "form-control" %>
-  </div>s
+  </div>
+
+  <div class="form-group">
+    <%= f.label :equipment_needed %><br>
+    <%= f.text_field :equipment_needed, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :time_per_workout, "Time Needed For Entire Workout? (Minutes)" %><br>
+    <%= f.text_field :time_per_workout, class: "form-control" %>
+  </div>
 
   <div class="actions">
     <%= f.submit class: "btn btn-default btn-lg" %>

@@ -6,6 +6,12 @@ class PlansController < ApplicationController
   end
 
   def create
+    @plan = Plan.new(plan_params)
+    if @plan.save!
+      redirect_to plan_url(@plan), notice: 'Successfully created New Plan!'
+    else
+      render :new
+    end
   end
 
   def show
@@ -25,6 +31,10 @@ class PlansController < ApplicationController
   end
 
   private
+
+  def plan_params
+    params.require(:plan).permit(:name, :equipment_needed, :time_per_workout)
+  end
 
   def set_plan
     @plan = Plan.find(params[:id])
