@@ -1931,3 +1931,97 @@ Migrating to AddDayToWorkout (20180428121513)
   [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
   [1m[36mWorkout Update (5.7ms)[0m  [1m[33mUPDATE "workouts" SET "updated_at" = ?, "day" = ? WHERE "workouts"."id" = ?[0m  [["updated_at", "2018-04-28 12:16:02.143885"], ["day", "Mon"], ["id", 1]]
   [1m[35m (13.2ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/plans" for 127.0.0.1 at 2018-04-28 08:24:30 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/penguino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  Rendered plans/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 6515ms (Views: 6498.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2018-04-28 08:25:14 -0400
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  Rendered plans/index.html.erb within layouts/application (70.8ms)
+Completed 500 Internal Server Error in 92ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1>Plans</h1>
+    2:   <% @plans.each do |plan| %>
+    3:     <p class="col-lg-8 mx-auto"><%= plan.name %></h2>
+    4:   <% end %>
+  
+app/views/plans/index.html.erb:2:in `_app_views_plans_index_html_erb___1807049446970216428_69820174792180'
+Started GET "/plans" for 127.0.0.1 at 2018-04-28 08:25:31 -0400
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (0.4ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:2
+  Rendered plans/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 117ms (Views: 104.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/plans" for 127.0.0.1 at 2018-04-28 08:25:43 -0400
+Processing by PlansController#index as HTML
+  Rendering plans/index.html.erb within layouts/application
+  [1m[36mPlan Load (13.8ms)[0m  [1m[34mSELECT "plans".* FROM "plans"[0m
+  ↳ app/views/plans/index.html.erb:2
+  Rendered plans/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 85ms (Views: 68.4ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/plans/ne" for 127.0.0.1 at 2018-04-28 08:26:41 -0400
+Processing by PlansController#show as HTML
+  Parameters: {"id"=>"ne"}
+  [1m[36mPlan Load (0.5ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:30
+Completed 404 Not Found in 56ms (ActiveRecord: 1.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Plan with 'id'=ne):
+  
+app/controllers/plans_controller.rb:30:in `set_plan'
+Started GET "/plans/new" for 127.0.0.1 at 2018-04-28 08:26:44 -0400
+Processing by PlansController#new as HTML
+  Rendering plans/new.html.erb within layouts/application
+  Rendered plans/_form.html.erb (52.3ms)
+  Rendered plans/new.html.erb within layouts/application (55.2ms)
+Completed 500 Internal Server Error in 91ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<Plan:0x007f0088011208>):
+    1: <%= form_for(@plan) do |f| %>
+    2:   <div class="form-group">
+    3:     <%= f.label :name %><br>
+    4:     <%= f.text_field :name, class: "form-control" %>
+    5:   </div>s
+    6: 
+    7:   <div class="actions">
+  
+app/views/plans/_form.html.erb:4:in `block in _app_views_plans__form_html_erb__3334183658393218131_69820129578540'
+app/views/plans/_form.html.erb:1:in `_app_views_plans__form_html_erb__3334183658393218131_69820129578540'
+app/views/plans/new.html.erb:2:in `_app_views_plans_new_html_erb__268243896506046090_69820129550100'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/penguino/.rbenv/versions/2.3.1/bin/rake:23
+Migrating to AddNameToPlan (20180428122750)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/penguino/.rbenv/versions/2.3.1/bin/rake:23
+  [1m[35m (2.5ms)[0m  [1m[35mALTER TABLE "plans" ADD "name" varchar[0m
+  ↳ db/migrate/20180428122750_add_name_to_plan.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (2.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180428122750"]]
+  ↳ /home/penguino/.rbenv/versions/2.3.1/bin/rake:23
+  [1m[35m (7.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/penguino/.rbenv/versions/2.3.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/penguino/.rbenv/versions/2.3.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/penguino/.rbenv/versions/2.3.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/penguino/.rbenv/versions/2.3.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/penguino/.rbenv/versions/2.3.1/bin/rake:23
