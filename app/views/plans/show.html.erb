@@ -1,9 +1,9 @@
 <h1><%= @plan.name %></h1>
-
+<br>
 <% @plan.days_of_week.each do |day_of_week| %>
   <h3 class="col-lg-8 mx-auto"><%= day_of_week %></h3>
   <div class="actions">
-    <%= link_to 'Add Workout', new_workout(day_of_week), class: "btn btn-default btn-lg" %>
+    <%= link_to 'Add Workout', new_workout_url(:workout_day => day_of_week), class: "btn btn-default btn-lg" %>
   </div>
   <br>
 <% end %>

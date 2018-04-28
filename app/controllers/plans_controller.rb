@@ -38,5 +38,6 @@ class PlansController < ApplicationController
 
   def set_plan
     @plan = Plan.find(params[:id])
+    @workout = Workout.new
   end
 end

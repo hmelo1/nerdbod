@@ -4,9 +4,11 @@ class WorkoutsController < ApplicationController
 
   def new
     @workout = Workout.new
+    @workout.day = params[:workout_day]
   end
 
   def create
+    binding.pry
     @workout = Workout.new(workout_params)
     if @workout.save!
       redirect_to workout_url(@workout), notice: 'Successfully created workout!'
@@ -41,7 +43,7 @@ class WorkoutsController < ApplicationController
   private
 
   def workout_params
-    params.require(:workout).permit(:name, :muscle_group, :equipment, :time_length, :reps, :sets)
+    params.require(:workout).permit(:name, :muscle_group, :equipment, :time_length, :reps, :sets, :day)
   end
 
   def set_workout
