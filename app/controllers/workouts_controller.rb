@@ -1,5 +1,7 @@
 require 'pry'
 class WorkoutsController < ApplicationController
+  before_action :set_workout, only: [:show, :edit, :update, :destroy]
+
   def new
     @workout = Workout.new
   end
@@ -14,9 +16,11 @@ class WorkoutsController < ApplicationController
   end
 
   def index
+    @workouts = Workout.all
   end
 
   def show
+
   end
 
   def edit
@@ -32,5 +36,9 @@ class WorkoutsController < ApplicationController
 
   def workout_params
     params.require(:workout).permit(:name, :muscle_group, :equipment, :time_length, :reps, :sets)
+  end
+
+  def set_workout
+    @workout = Workout.find(params[:id])
   end
 end
