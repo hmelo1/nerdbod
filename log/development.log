@@ -2102,3 +2102,57 @@ Processing by PlansController#show as HTML
 Completed 200 OK in 114ms (Views: 105.8ms | ActiveRecord: 4.1ms)
 
 
+Started GET "/plans/1" for 127.0.0.1 at 2018-04-28 08:39:47 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/penguino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by PlansController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlan Load (0.4ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:40
+  Rendering plans/show.html.erb within layouts/application
+  Rendered plans/show.html.erb within layouts/application (38858.5ms)
+Completed 200 OK in 39644ms (Views: 39575.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/plans/1" for 127.0.0.1 at 2018-04-28 08:40:30 -0400
+Processing by PlansController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlan Load (0.4ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:40
+  Rendering plans/show.html.erb within layouts/application
+  Rendered plans/show.html.erb within layouts/application (153709.7ms)
+Completed 200 OK in 153923ms (Views: 153874.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/plans/1" for 127.0.0.1 at 2018-04-28 08:43:27 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/penguino/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by PlansController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlan Load (0.4ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:40
+  Rendering plans/show.html.erb within layouts/application
+  Rendered plans/show.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 838ms (Views: 729.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/plans/1" for 127.0.0.1 at 2018-04-28 08:46:37 -0400
+Processing by PlansController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlan Load (0.3ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:40
+  Rendering plans/show.html.erb within layouts/application
+  Rendered plans/show.html.erb within layouts/application (40.8ms)
+Completed 200 OK in 117ms (Views: 112.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/plans/1" for 127.0.0.1 at 2018-04-28 08:46:53 -0400
+Processing by PlansController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlan Load (0.4ms)[0m  [1m[34mSELECT  "plans".* FROM "plans" WHERE "plans"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plans_controller.rb:40
+  Rendering plans/show.html.erb within layouts/application
+  Rendered plans/show.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 113ms (Views: 107.7ms | ActiveRecord: 0.4ms)
+
+
