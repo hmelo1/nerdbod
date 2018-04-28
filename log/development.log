@@ -1834,3 +1834,100 @@ Processing by WorkoutsController#index as HTML
 Completed 200 OK in 114ms (Views: 110.7ms | ActiveRecord: 1.0ms)
 
 
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/penguino/.rbenv/versions/2.3.1/bin/rake:23
+Migrating to AddDayToPlan (20180428120558)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/penguino/.rbenv/versions/2.3.1/bin/rake:23
+Migrating to AddDayToPlan (20180428120558)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/penguino/.rbenv/versions/2.3.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "plans" ADD "day" varchar[0m
+  ↳ db/migrate/20180428120558_add_day_to_plan.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180428120558"]]
+  ↳ /home/penguino/.rbenv/versions/2.3.1/bin/rake:23
+  [1m[35m (7.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/penguino/.rbenv/versions/2.3.1/bin/rake:23
+Migrating to RemoveDateFromWorkout (20180428120817)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/penguino/.rbenv/versions/2.3.1/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20180428120817_remove_date_from_workout.rb:3
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aworkouts" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "muscle_group" varchar DEFAULT NULL, "equipment" varchar DEFAULT NULL, "time_length" integer DEFAULT NULL, "date" date DEFAULT NULL, "reps" integer DEFAULT NULL, "sets" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180428120817_remove_date_from_workout.rb:3
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "aworkouts" ("id","name","muscle_group","equipment","time_length","date","reps","sets","created_at","updated_at")
+                     SELECT "id","name","muscle_group","equipment","time_length","date","reps","sets","created_at","updated_at" FROM "workouts"[0m
+  ↳ db/migrate/20180428120817_remove_date_from_workout.rb:3
+  [1m[35m (1.2ms)[0m  [1m[35mDROP TABLE "workouts"[0m
+  ↳ db/migrate/20180428120817_remove_date_from_workout.rb:3
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "workouts" ("id" integer NOT NULL PRIMARY KEY, "name" varchar DEFAULT NULL, "muscle_group" varchar DEFAULT NULL, "equipment" varchar DEFAULT NULL, "time_length" integer DEFAULT NULL, "reps" integer DEFAULT NULL, "sets" integer DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20180428120817_remove_date_from_workout.rb:3
+  [1m[35m (0.3ms)[0m  [1m[32mINSERT INTO "workouts" ("id","name","muscle_group","equipment","time_length","reps","sets","created_at","updated_at")
+                     SELECT "id","name","muscle_group","equipment","time_length","reps","sets","created_at","updated_at" FROM "aworkouts"[0m
+  ↳ db/migrate/20180428120817_remove_date_from_workout.rb:3
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "aworkouts"[0m
+  ↳ db/migrate/20180428120817_remove_date_from_workout.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180428120817"]]
+  ↳ /home/penguino/.rbenv/versions/2.3.1/bin/rake:23
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/penguino/.rbenv/versions/2.3.1/bin/rake:23
+Migrating to RemoveGoalFromPlan (20180428121026)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/penguino/.rbenv/versions/2.3.1/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TEMPORARY TABLE "aplans" ("id" integer NOT NULL PRIMARY KEY, "time_per_workout" integer DEFAULT NULL, "equipment_needed" varchar DEFAULT NULL, "goal" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "day" varchar DEFAULT NULL)[0m
+  ↳ db/migrate/20180428121026_remove_goal_from_plan.rb:3
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "aplans" ("id","time_per_workout","equipment_needed","goal","created_at","updated_at","day")
+                     SELECT "id","time_per_workout","equipment_needed","goal","created_at","updated_at","day" FROM "plans"[0m
+  ↳ db/migrate/20180428121026_remove_goal_from_plan.rb:3
+  [1m[35m (4.7ms)[0m  [1m[35mDROP TABLE "plans"[0m
+  ↳ db/migrate/20180428121026_remove_goal_from_plan.rb:3
+  [1m[35m (6.5ms)[0m  [1m[35mCREATE TABLE "plans" ("id" integer NOT NULL PRIMARY KEY, "time_per_workout" integer DEFAULT NULL, "equipment_needed" varchar DEFAULT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "day" varchar DEFAULT NULL)[0m
+  ↳ db/migrate/20180428121026_remove_goal_from_plan.rb:3
+  [1m[35m (0.2ms)[0m  [1m[32mINSERT INTO "plans" ("id","time_per_workout","equipment_needed","created_at","updated_at","day")
+                     SELECT "id","time_per_workout","equipment_needed","created_at","updated_at","day" FROM "aplans"[0m
+  ↳ db/migrate/20180428121026_remove_goal_from_plan.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "aplans"[0m
+  ↳ db/migrate/20180428121026_remove_goal_from_plan.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180428121026"]]
+  ↳ /home/penguino/.rbenv/versions/2.3.1/bin/rake:23
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/penguino/.rbenv/versions/2.3.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (1.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/penguino/.rbenv/versions/2.3.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/penguino/.rbenv/versions/2.3.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/penguino/.rbenv/versions/2.3.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/penguino/.rbenv/versions/2.3.1/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/penguino/.rbenv/versions/2.3.1/bin/rake:23
+Migrating to RemoveDayToPlan (20180428121447)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/penguino/.rbenv/versions/2.3.1/bin/rake:23
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180428121447"]]
+  ↳ /home/penguino/.rbenv/versions/2.3.1/bin/rake:23
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/penguino/.rbenv/versions/2.3.1/bin/rake:23
+Migrating to AddDayToWorkout (20180428121513)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/penguino/.rbenv/versions/2.3.1/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "workouts" ADD "day" varchar[0m
+  ↳ db/migrate/20180428121513_add_day_to_workout.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20180428121513"]]
+  ↳ /home/penguino/.rbenv/versions/2.3.1/bin/rake:23
+  [1m[35m (27.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/penguino/.rbenv/versions/2.3.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/penguino/.rbenv/versions/2.3.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/penguino/.rbenv/versions/2.3.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/penguino/.rbenv/versions/2.3.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/penguino/.rbenv/versions/2.3.1/bin/rake:23
+  [1m[36mWorkout Load (1.2ms)[0m  [1m[34mSELECT "workouts".* FROM "workouts"[0m
+  [1m[36mWorkout Load (0.3ms)[0m  [1m[34mSELECT  "workouts".* FROM "workouts" ORDER BY "workouts"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWorkout Update (5.7ms)[0m  [1m[33mUPDATE "workouts" SET "updated_at" = ?, "day" = ? WHERE "workouts"."id" = ?[0m  [["updated_at", "2018-04-28 12:16:02.143885"], ["day", "Mon"], ["id", 1]]
+  [1m[35m (13.2ms)[0m  [1m[36mcommit transaction[0m
