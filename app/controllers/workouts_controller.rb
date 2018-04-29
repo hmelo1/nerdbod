@@ -3,14 +3,18 @@ class WorkoutsController < ApplicationController
   before_action :set_workout, only: [:show, :edit, :update, :destroy]
 
   def new
-    @workout = Workout.new
-    @workout.day = params[:workout_day]
+    @plan = Plan.find(params[:plan_id])
+    @workout = Workout.new(
+      :plan_id => params[:plan_id],
+      :day => params[:workout_day]
+    )
   end
 
   def create
     @workout = Workout.new(workout_params)
+    @workout.plan_id = plan_id_params
     if @workout.save!
-      redirect_to plan_workout_url(@workout), notice: 'Successfully created workout!'
+      redirect_to plan_workout_url(@workout.plan_id, @workout), notice: 'Successfully created workout!'
     else
       render :new
     end
@@ -28,7 +32,7 @@ class WorkoutsController < ApplicationController
 
   def update
     if @workout.update(workout_params)
-      redirect_to plan_workout_url(@workout), notice: 'Successfully updated workout!'
+      redirect_to plan_workout_url(@workout.plan_id, @workout), notice: 'Successfully updated workout!'
     else
       render :edit
     end
@@ -45,7 +49,12 @@ class WorkoutsController < ApplicationController
     params.require(:workout).permit(:name, :muscle_group, :equipment, :time_length, :reps, :sets, :day)
   end
 
+  def plan_id_params
+    params.require(:plan_id)
+  end
+
   def set_workout
+    @plan = Plan.find(params[:plan_id])
     @workout = Workout.find(params[:id])
   end
 end

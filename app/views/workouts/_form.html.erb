@@ -1,5 +1,6 @@
-<%= form_for(@workout) do |f| %>
-
+<%= form_for [@plan, @workout] do |f| %>
+  <h3><%= @plan.name %></h3>
+  <h5><%= @workout.day %></h5>
   <div class="form-group">
     <%= f.label :name %><br>
     <%= f.text_field :name, class: "form-control" %>
