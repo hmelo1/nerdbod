@@ -1,4 +1,4 @@
 <h1>Workouts</h1>
   <% @workouts.each do |workout| %>
-    <p class="col-lg-8 mx-auto"><%= workout.full_name %></h2>
+    <h2><%= link_to workout.full_name edit_plan_workout_url(@plan, workout.id) %></h2>
   <% end %>

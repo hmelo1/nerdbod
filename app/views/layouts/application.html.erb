@@ -19,7 +19,7 @@
             <div class="navbar-collapse collapse" id="navbarResponsive" style="">
               <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                  <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                  <%= link_to "All Plans", plans_url, :class => 'nav-link js-scroll-trigger' %>
                 </li>
                 <% if user_signed_in? %>
                   <li class="nav-item">
