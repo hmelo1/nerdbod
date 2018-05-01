@@ -1,6 +1,6 @@
 class WorkoutsController < ApplicationController
   before_action :set_workout, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:new, :edit, :create, :update, :destroy]
+  before_action :authenticate_admin!, only: [:new, :edit, :create, :update, :destroy]
 
   def new
     @plan = Plan.find(params[:plan_id])

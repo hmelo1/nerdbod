@@ -1,5 +1,5 @@
 <h1>Workout Plans</h1>
-<% if user_signed_in? %>
+<% if admin_signed_in? %>
 <div class="actions">
   <%= link_to 'Create New Plan', new_plan_url, class: "btn btn-default btn-lg" %>
 </div>
