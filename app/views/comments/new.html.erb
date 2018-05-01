@@ -1,0 +1,9 @@
+<h1>New Comment </h1>
+<%= @plan.name %>
+<%= form_for [@plan, @comment] do |f| %>
+  <%= f.text_area :text, class: "form-control"%>
+
+  <div class="actions">
+    <%= f.submit class: "btn btn-default btn-lg" %>
+  </div>
+<% end %>

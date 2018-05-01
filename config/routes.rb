@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'static_pages#home'
   resources :plans  do
     resources :workouts
+    resources :comments, only: [:new, :create]
   end
 
 

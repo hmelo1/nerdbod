@@ -16,6 +16,7 @@ class PlansController < ApplicationController
   end
 
   def show
+    @comments = @plan.comments
   end
 
   def index
