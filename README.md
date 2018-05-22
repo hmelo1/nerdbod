@@ -1,24 +1,24 @@
-# README
+# NerdBod
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+NerdBod is a worrkout organizer built with Ruby on Rails. Currently allows users top post comments on each workout plan. 
 
-Things you may want to cover:
+## Getting Started
 
-* Ruby version
+1. Install Ruby Dependencies
 
-* System dependencies
+`bundle install`
 
-* Configuration
+2. The database must first be seeded with the characters in order for the game to work as intended:
 
-* Database creation
+`rails db:migrate db:seed`
 
-* Database initialization
+3. Install NPM packages
 
-* How to run the test suite
+`npm install`
 
-* Services (job queues, cache servers, search engines, etc.)
+4. Test the application out on Local Server
 
-* Deployment instructions
+Type `rails s` in Terminal to run Rails server and visit locahost:3000 in browser
 
-* ...
+## License
+[Nerdbod](https://github.com/hmelo1/nerdbod) is licensed under the [MIT license](http://opensource.org/licenses/MIT).
